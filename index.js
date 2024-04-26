@@ -1,5 +1,10 @@
 import express from 'express';
 import { PORT } from './config.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const mongoDbAccess = process.env.MONGODB_ACCESS_URL;
 
 const app = express();
 
