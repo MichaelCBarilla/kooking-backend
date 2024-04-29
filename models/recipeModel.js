@@ -20,9 +20,9 @@ const ingredientSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  amountType: {
+  amountLabel: {
     type: String,
-    required: false,
+    required: true,
   },
   note: {
     type: String,
