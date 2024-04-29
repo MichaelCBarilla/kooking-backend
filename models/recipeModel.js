@@ -11,25 +11,18 @@ const directionSchema = new mongoose.Schema({
   },
 });
 
-const ingredientAmountSchema = new mongoose.Schema({
+const ingredientSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
   amount: {
     type: Number,
     required: true,
   },
   amountType: {
     type: String,
-    required: true,
-  },
-});
-
-const ingredientSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-  },
-  ingredientAmount: { 
-    type: ingredientAmountSchema, 
-    required: false 
+    required: false,
   },
   note: {
     type: String,
